@@ -1,0 +1,30 @@
+.top-bar {
+  background-color: var(--grey-20);
+  padding: 10px;
+}
+
+.top-bar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 30px;
+  margin: 0 auto;
+
+  max-width: 1200px;
+
+  color: var(--grey-500);
+}
+
+.top-bar-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.top-bar-link-icon {
+  transform: scale(0.7);
+}
