@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
+  padding: 15px 0 50px 10px;
 }
 
 .logo {
@@ -20,10 +20,11 @@
 .navbar-links {
   display: flex;
   flex-direction: row;
+  gap: 24px;
 }
 
 .navbar-link {
-  padding: 16px 14px;
+  padding: 16px 0;
   border-top: 1px solid transparent;
   font-weight: 600;
   text-transform: uppercase;
@@ -42,7 +43,7 @@
 }
 
 .navbar-lang-btn-wrapper {
-  padding: 16px;
+  padding: 12px 10px;
   font-weight: 600;
   color: var(--grey-600);
   border-bottom: 1px solid transparent;
@@ -55,7 +56,7 @@
 }
 
 .navbar-lang-btn-wrapper-active {
-  padding: 16px;
+  padding: 12px 10px;
   color: var(--white);
   background-color: var(--red);
 

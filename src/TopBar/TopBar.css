@@ -1,6 +1,6 @@
 .top-bar {
-  background-color: var(--grey-20);
-  padding: 10px;
+  background-color: var(--grey-30);
+  padding: 10px 0;
 }
 
 .top-bar-links {
@@ -11,9 +11,9 @@
   gap: 30px;
   margin: 0 auto;
 
-  max-width: 1200px;
+  max-width: 1120px;
 
-  color: var(--grey-500);
+  color: var(--grey-400);
 }
 
 .top-bar-link {

@@ -1,10 +1,10 @@
 .page-title-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  padding: 80px 0 100px;
+  gap: 12px;
+  padding: 20px 0 80px;
 
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--grey-200);
 }
 
 .page-title {
@@ -40,6 +40,7 @@
 
 .textarea-title {
   text-align: center;
+  font-weight: 600;
 }
 
 .textarea-text {
@@ -60,15 +61,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* gap: 50px; */
 }
 
 .img-and-text {
-  width: 560px;
+  max-width: 520px;
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
 .img {
-  width: 560px;
+  max-width: 520px;
+  width: 100%;
 }

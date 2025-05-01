@@ -12,7 +12,7 @@ function TopBar() {
             <PlaceIcon />
           </div>
           <div className="top-bar-link-text">
-            <h2>м. Київ, Вознесенський узвіз, 00</h2>
+            <h4>м. Київ, Вознесенський узвіз, 00</h4>
           </div>
         </div>
         <div className="top-bar-link">
@@ -20,7 +20,7 @@ function TopBar() {
             <PhoneIcon />
           </div>
           <div className="top-bar-link-text">
-            <h2>+38 (000) 000-00-00</h2>
+            <h4>+38 (000) 000-00-00</h4>
           </div>
         </div>
       </div>
