@@ -1,0 +1,48 @@
+.contact-us-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.contact-us-textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 40%;
+  gap: 25px;
+}
+
+.contact-us-textarea {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.contact-us-map {
+  flex: 60%;
+}
+
+.contact-us-textarea-bold {
+  font-family: "Roboto Medium";
+  font-weight: 600;
+
+  color: var(--grey-500);
+}
+
+.contact-us-textarea-bold-black {
+  font-size: 22px;
+  font-family: "Roboto Medium";
+  font-weight: 700;
+}
+
+.contact-us-textarea-text {
+  color: var(--grey-600);
+}
+
+.contact-us-btn {
+  padding: 15px 30px;
+  background-color: var(--red);
+  color: var(--white);
+  font-family: "Roboto Medium";
+  font-weight: 600;
+}

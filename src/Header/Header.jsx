@@ -26,15 +26,15 @@ export default function Header() {
               <Link to="/catalog" className="navbar-link">
                 <h4>експонати музею</h4>
               </Link>
-              <Link to="gallery" className="navbar-link">
+              <Link to="/gallery" className="navbar-link">
                 <h4>галерея</h4>
               </Link>
               <Link className="navbar-link">
                 <h4>про нас</h4>
               </Link>
-              <div className="navbar-link">
+              <Link to="/contact-us" className="navbar-link">
                 <h4>контакти</h4>
-              </div>
+              </Link>
             </div>
 
             <div className="navbar-lang-btns">
