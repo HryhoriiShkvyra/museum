@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   /* gap: 25px; */
-  margin: 35px auto 0;
+  margin: 40px auto 0;
 }
 
 .filter-by-country div {
@@ -77,17 +77,18 @@
 }
 
 .catalog-item-img:hover {
-  transform: scale(1.4);
+  transform: scale(1.3);
   transition: all ease 0.5s;
 }
 
 .catalog-item-title {
-  /* margin-top: 10px; */
-  height: 50px;
+  /* height: 50px; */
   text-transform: uppercase;
   text-align: center;
 }
 
 .catalog-item-about {
+  margin-top: 10px;
+
   text-align: center;
 }

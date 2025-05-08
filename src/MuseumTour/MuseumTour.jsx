@@ -27,9 +27,7 @@ export default function MuseumTour() {
         <div className="main-section">
           <div className="halls">
             <Link className="hall" to="/museum-tour/hall-1">
-              <div className="hall-img" src={HAll_1} alt="">
-                <img />
-              </div>
+              <img className="hall-img" src={HAll_1} alt="" />
               <div className="hall-img-text">Зал 1</div>
             </Link>
             <Link className="hall" to="/museum-tour/hall-2">

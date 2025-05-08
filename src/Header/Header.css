@@ -28,6 +28,8 @@
   border-top: 1px solid transparent;
   font-weight: 600;
   text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
 
   cursor: pointer;
 }

@@ -7,6 +7,7 @@ import Footer from "./Footer/Footer.jsx";
 import MuseumTour from "./MuseumTour/MuseumTour.jsx";
 import Halls from "./Halls/Halls.jsx";
 import Catalog from "./Catalog/Catalog.jsx";
+import Gallery from "./Gallery/Gallery.jsx";
 
 const Layout = () => {
   return (
@@ -35,6 +36,7 @@ function App() {
           element: <Halls />,
         },
         { path: "/catalog", element: <Catalog /> },
+        { path: "/gallery", element: <Gallery /> },
       ],
     },
   ]);

@@ -28,7 +28,8 @@
 
 .hall-img-text {
   position: absolute;
-  max-width: 520px;
+  width: 100%;
+  /* max-width: 520px; */
   padding: 20px;
   bottom: 0;
   text-align: center;

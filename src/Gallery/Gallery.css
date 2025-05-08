@@ -1,0 +1,33 @@
+.gallery-table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px 35px;
+
+  color: var(--grey-800);
+}
+
+.gallery-table-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.gallery-table-item:last-child {
+}
+
+.gallery-table-photo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  overflow: hidden;
+}
+
+.gallery-table-photo img {
+  width: 340px;
+  height: 400px;
+  object-fit: cover;
+}
