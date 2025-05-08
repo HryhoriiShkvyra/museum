@@ -9,6 +9,7 @@ import Halls from "./Halls/Halls.jsx";
 import Catalog from "./Catalog/Catalog.jsx";
 import Gallery from "./Gallery/Gallery.jsx";
 import ContactUs from "./ContactUs/ContactUs.jsx";
+import RulesForVisiting from "./RulesForVisiting/RulesForVisiting.jsx";
 
 const Layout = () => {
   return (
@@ -39,6 +40,7 @@ function App() {
         { path: "/catalog", element: <Catalog /> },
         { path: "/gallery", element: <Gallery /> },
         { path: "/contact-us", element: <ContactUs /> },
+        { path: "/rules-for-visiting", element: <RulesForVisiting /> },
       ],
     },
   ]);

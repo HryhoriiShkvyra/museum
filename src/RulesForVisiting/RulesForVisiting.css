@@ -1,0 +1,25 @@
+.rules-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.rules-title {
+  text-align: center;
+  padding: 45px 0 30px;
+  font-weight: 600;
+}
+
+.rules-title-restriction {
+  font-weight: 600;
+  text-align: left;
+  color: var(--black);
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+  line-height: 1.5;
+  color: var(--grey-600);
+}
