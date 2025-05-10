@@ -46,4 +46,6 @@
   color: var(--white);
   font-family: "Roboto Medium";
   font-weight: 600;
+
+  text-decoration: none;
 }

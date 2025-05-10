@@ -1,6 +1,7 @@
 import React from "react";
 import "./ContactUs.css";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import { Link } from "react-router-dom";
 
 export default function ContactUs() {
   return (
@@ -58,10 +59,20 @@ export default function ContactUs() {
               </div>
             </div>
             <div className="contact-us-textarea">
-              <div className="contact-us-btn">Правила відвідування музею</div>
+              <Link
+                to="/contact-us/rules-for-visiting"
+                className="contact-us-btn"
+              >
+                Правила відвідування музею
+              </Link>
             </div>
             <div className="contact-us-textarea">
-              <div className="contact-us-btn">Ціни та умови відвідування</div>
+              <Link
+                to="/contact-us/conditions-for-visiting"
+                className="contact-us-btn"
+              >
+                Ціни та умови відвідування
+              </Link>
             </div>
           </div>
           <div className="contact-us-map">
