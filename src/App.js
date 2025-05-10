@@ -11,6 +11,7 @@ import Gallery from "./Gallery/Gallery.jsx";
 import ContactUs from "./ContactUs/ContactUs.jsx";
 import RulesForVisiting from "./RulesForVisiting/RulesForVisiting.jsx";
 import ConditionsForVisiting from "./ConditionsForVisiting/ConditionsForVisiting.jsx";
+import News from "./News/News.jsx";
 
 const Layout = () => {
   return (
@@ -40,6 +41,7 @@ function App() {
         },
         { path: "/catalog", element: <Catalog /> },
         { path: "/gallery", element: <Gallery /> },
+        { path: "/news", element: <News /> },
         { path: "/contact-us", element: <ContactUs /> },
         {
           path: "/contact-us/rules-for-visiting",

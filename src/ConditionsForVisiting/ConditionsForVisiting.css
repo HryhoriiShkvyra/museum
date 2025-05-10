@@ -35,6 +35,11 @@
   line-height: 1.4;
 }
 
+.conditions-number {
+  width: 10%;
+  text-align: center;
+}
+
 .conditions-disclaimer {
   display: flex;
   flex-direction: row;

@@ -1,0 +1,21 @@
+.news-post {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.news-img {
+  /* width: 800px;
+  height: 600px;
+   */
+}
+
+.news-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}

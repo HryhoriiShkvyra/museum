@@ -29,7 +29,7 @@ export default function Header() {
               <Link to="/gallery" className="navbar-link">
                 <h4>галерея</h4>
               </Link>
-              <Link className="navbar-link">
+              <Link to="/news" className="navbar-link">
                 <h4>про нас</h4>
               </Link>
               <Link to="/contact-us" className="navbar-link">
