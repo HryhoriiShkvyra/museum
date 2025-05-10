@@ -1,3 +1,7 @@
+/* .news {
+  margin-top: 25px;
+}
+
 .news-post {
   display: flex;
   flex-direction: column;
@@ -8,9 +12,8 @@
 }
 
 .news-img {
-  /* width: 800px;
-  height: 600px;
-   */
+  width: 600px;
+  margin-left: 35px;
 }
 
 .news-data {
@@ -18,4 +21,4 @@
   flex-direction: row;
   align-items: center;
   gap: 8px;
-}
+} */

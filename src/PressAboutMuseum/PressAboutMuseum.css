@@ -1,0 +1,33 @@
+.card-title {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 45px auto;
+  padding: 0 10px;
+}
+
+.card-textarea-text {
+  color: var(--grey-600);
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.card-textarea-bold {
+  color: var(--grey-700);
+  text-align: justify;
+  font-weight: 600;
+  line-height: 1.5;
+}

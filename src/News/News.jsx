@@ -2,6 +2,7 @@ import REACT from "react";
 import "./News.css";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import IMG_1 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start cover.jpg";
 
 const News = () => {
   const newsData = [
@@ -12,7 +13,7 @@ const News = () => {
       sub_title:
         "В інтерв'ю газеті «ФАКТИ» Олександр Швець розповів про єдиний в Україні музей порцелянових фігур",
       date: "6 серпня 2022",
-      img: "",
+      img: IMG_1,
     },
     {
       id: "2",
@@ -50,7 +51,7 @@ const News = () => {
   ];
 
   return (
-    <div className="news">
+    <div className="news-page">
       <div className="section">
         <div className="page-title-wrapper">
           <div className="page-title">
@@ -66,14 +67,24 @@ const News = () => {
         </div>
       </div>
       <div className="main-section">
-        <div className="news">
+        {/* <div className="news">
           {newsData.map((news) => (
-            <div className="news-post">
-              <img
-                className="news-img"
-                src="https://placehold.co/600x400?text=IMG"
-                alt="placeholder"
-              ></img>
+            <div key={news.id + "_" + news.img} className="news-post">
+              {news.img ? (
+                <img
+                  className="news-img"
+                  src={news.img}
+                  //   src="https://placehold.co/600x400?text=IMG"
+                  alt="news.img"
+                ></img>
+              ) : (
+                <img
+                  className="news-img"
+                  src="https://placehold.co/600x400?text=IMG"
+                  alt="placeholder"
+                ></img>
+              )}
+
               <div className="news-title">
                 <h1>{news.title}</h1>
               </div>
@@ -85,7 +96,7 @@ const News = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
