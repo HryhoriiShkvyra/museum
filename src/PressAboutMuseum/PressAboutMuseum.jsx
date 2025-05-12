@@ -1,4 +1,3 @@
-import REACT from "react";
 import "./PressAboutMuseum.css";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import COVER from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start cover.jpg";
@@ -12,8 +11,13 @@ import IMG_7 from "../Assets/news/Part one. The start of the collection and the 
 import IMG_8 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_8.jpg";
 import IMG_9 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_9.jpg";
 import IMG_10 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_10.jpg";
+import { useParams } from "react-router-dom";
 
 const PressAboutMuseum = () => {
+  const id = useParams();
+
+  console.log(id);
+
   return (
     <div className="press-about-museum">
       <div className="section">
@@ -229,7 +233,7 @@ const PressAboutMuseum = () => {
         </div>
         <div className="card-img">
           <img src={IMG_2} alt=""></img>
-        </div>{" "}
+        </div>
         <div className="card-textarea">
           <div className="card-textarea-bold">
             — Чому ви стали колекціонувати саме фарфор? Коли сталося це осяяння?
@@ -278,7 +282,7 @@ const PressAboutMuseum = () => {
         </div>
         <div className="card-img">
           <img src={IMG_3} alt=""></img>
-        </div>{" "}
+        </div>
         <div className="card-textarea">
           <div className="card-textarea-bold">
             — Ці роботи й започаткували вашу колекцію?
@@ -364,7 +368,7 @@ const PressAboutMuseum = () => {
         </div>
         <div className="card-img">
           <img src={IMG_4} alt=""></img>
-        </div>{" "}
+        </div>
         <div className="card-textarea">
           <div className="card-textarea-bold">
             — Ви неодноразово розповідали, як це непросто — знайти витвір, який
@@ -422,7 +426,7 @@ const PressAboutMuseum = () => {
         </div>
         <div className="card-img">
           <img src={IMG_5} alt=""></img>
-        </div>{" "}
+        </div>
         <div className="card-textarea">
           <div className="card-textarea-text">
             Потім ми багато разів були у Валенсії, зустрічалися з членами сім'ї
@@ -474,7 +478,7 @@ const PressAboutMuseum = () => {
         </div>
         <div className="card-img">
           <img src={IMG_6} alt=""></img>
-        </div>{" "}
+        </div>
         <div className="card-textarea">
           <div className="card-textarea-bold">
             — Ви точно не народилися зі срібною ложкою в роті. Звідки в
@@ -542,7 +546,7 @@ const PressAboutMuseum = () => {
         </div>
         <div className="card-img">
           <img src={IMG_7} alt=""></img>
-        </div>{" "}
+        </div>
         <div className="card-textarea">
           <div className="card-textarea-text">
             — Це, до речі, велика рідкість. Я бачив у палацах Італії та Австрії
@@ -593,7 +597,7 @@ const PressAboutMuseum = () => {
         </div>
         <div className="card-img">
           <img src={IMG_8} alt=""></img>
-        </div>{" "}
+        </div>
         <div className="card-textarea">
           <div className="card-textarea-text">
             Поруч я поклав фрагменти снарядів і мін, привезені зі Стоянки та
@@ -618,7 +622,7 @@ const PressAboutMuseum = () => {
         </div>
         <div className="card-img">
           <img src={IMG_9} alt=""></img>
-        </div>{" "}
+        </div>
         <div className="card-textarea">
           <div className="card-textarea-text">
             На стіні буде короткий виклад цієї історії та фото Кристини з нашою
@@ -650,7 +654,7 @@ const PressAboutMuseum = () => {
         </div>
         <div className="card-img">
           <img src={IMG_10} alt=""></img>
-        </div>{" "}
+        </div>
         <div className="card-textarea">
           <div className="card-textarea-bold">
             — Фахівці стреврджують, що Lladro має чотири тисячі кольорових

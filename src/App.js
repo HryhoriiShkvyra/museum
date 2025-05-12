@@ -13,10 +13,11 @@ import RulesForVisiting from "./RulesForVisiting/RulesForVisiting.jsx";
 import ConditionsForVisiting from "./ConditionsForVisiting/ConditionsForVisiting.jsx";
 import News from "./News/News.jsx";
 import PressAboutMuseum from "./PressAboutMuseum/PressAboutMuseum.jsx";
+import IndexPage from "./IndexPage/IndexPage.jsx";
 
 const Layout = () => {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Outlet />
       <Footer />
@@ -30,7 +31,7 @@ function App() {
       path: "/",
       element: <Layout />,
       children: [
-        { path: "/", element: "" },
+        { path: "/", element: <IndexPage /> },
         { path: "/about-museum", element: <AboutMuseum /> },
         {
           path: "/museum-tour",
@@ -43,7 +44,8 @@ function App() {
         { path: "/catalog", element: <Catalog /> },
         { path: "/gallery", element: <Gallery /> },
         { path: "/news", element: <News /> },
-        { path: "/test", element: <PressAboutMuseum /> },
+        { path: "/news/:id", element: <PressAboutMuseum /> },
+        // { path: "/test", element: <PressAboutMuseum /> },
         { path: "/contact-us", element: <ContactUs /> },
         {
           path: "/contact-us/rules-for-visiting",

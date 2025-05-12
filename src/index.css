@@ -202,3 +202,9 @@ h4 {
   margin: 0 auto;
   padding: 25px 15px;
 }
+
+/* @media (min-height: 1300px) {
+  .main-section {
+    margin-bottom: 150px  ;
+  }
+} */

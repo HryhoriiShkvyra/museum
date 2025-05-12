@@ -1,0 +1,33 @@
+.index-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.index-img {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.index-textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.index-textarea-title {
+  font-weight: 600;
+  margin: 40px 0 0px;
+}
+
+.index-textarea-text {
+  line-height: 1.5;
+  text-align: justify;
+  color: var(--grey-600);
+}
+
+.index-textarea-table-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--grey-800);
+}
