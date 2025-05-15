@@ -1,13 +1,26 @@
 import React from "react";
 import "./IndexPage.css";
 import Business_Center from "../Assets/voznesenskyi_business_center.jpg";
+import Slider from "../Slider/Slider";
 
 export default function IndexPage() {
   return (
     <div className="index-page">
-      <div className="slider"></div>
-      <div className="video"></div>
-      <img className="index-img" src={Business_Center} />
+      <Slider />
+      <div className="index-video">
+        <iframe
+          // width="560"
+          // height="315"
+          src="https://www.youtube.com/embed/l5T1gICNKgk?si=Uik32mGrTHVX4Nv0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <img className="index-img" src={Business_Center} alt="" />
 
       <div className="main-section">
         <div className="index-text-about">

@@ -13,8 +13,9 @@ export default function Header() {
 
       <div className="section">
         <div className="navbar">
-          <img className="logo" src={Logo} alt="" />
-
+          <Link to="/">
+            <img className="logo" src={Logo} alt="" />
+          </Link>
           <div className="navbar-btns">
             <div className="navbar-links">
               <Link to="/about-museum" className="navbar-link">

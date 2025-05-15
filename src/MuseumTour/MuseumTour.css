@@ -1,7 +1,7 @@
 .halls {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
 }
 
@@ -16,6 +16,7 @@
 
 .hall-img {
   max-width: 520px;
+  width: 100%;
   transition: all ease 0.5s;
   cursor: pointer;
 }
