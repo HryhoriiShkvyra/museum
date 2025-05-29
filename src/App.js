@@ -14,6 +14,7 @@ import ConditionsForVisiting from "./ConditionsForVisiting/ConditionsForVisiting
 import News from "./News/News.jsx";
 import PressAboutMuseum from "./PressAboutMuseum/PressAboutMuseum.jsx";
 import IndexPage from "./IndexPage/IndexPage.jsx";
+import CatalogItemPage from "./CatalogItemPage/CatalogItemPage.jsx";
 
 const Layout = () => {
   return (
@@ -42,6 +43,7 @@ function App() {
           element: <Halls />,
         },
         { path: "/catalog", element: <Catalog /> },
+        { path: "/catalog/:id", element: <CatalogItemPage /> },
         { path: "/gallery", element: <Gallery /> },
         { path: "/news", element: <News /> },
         { path: "/news/:id", element: <PressAboutMuseum /> },

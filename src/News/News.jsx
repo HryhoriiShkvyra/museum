@@ -65,7 +65,6 @@ const News = () => {
 
   const MakeUrl = (e) => {
     let url = e.title_eng;
-    // url = url.replace(/\s+/g, "-").toLowerCase();
     url = url
 
       .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, "")

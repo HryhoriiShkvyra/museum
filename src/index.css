@@ -165,6 +165,7 @@ table {
   --black: #000000;
 
   --red: #ff0000;
+  --light-red: #dc3545;
 }
 
 ::-webkit-scrollbar {

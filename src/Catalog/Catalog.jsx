@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Catalog.css";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import ITEM_1 from "../Assets/ITEM_1.jpg";
@@ -6,6 +7,22 @@ import ITEM_2 from "../Assets/ITEM_2.jpg";
 import ITEM_3 from "../Assets/ITEM_3.jpg";
 
 export default function Catalog() {
+  const countries = [
+    "Австрія",
+    "Англія",
+    "Данія",
+    "Іспанія",
+    "Італія",
+    "Китай",
+    "Нідерлінди",
+    "Німеччина",
+    "Туреччина",
+    "Україна",
+    "Франція",
+    "Чехія",
+    "Японія",
+  ];
+
   return (
     <div className="Catalog">
       <div className="section">
@@ -24,45 +41,13 @@ export default function Catalog() {
       </div>
       <div className="main-section">
         <div className="filter-by-country">
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Австрія</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Англія</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Данія</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Іспанія</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Італія</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Китай</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Нідерланди</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Німеччина</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Туреччина</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Україна</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Франція</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Чехія</h3>
-          </div>
-          <div className="filter-by-country-btn">
-            <h3 style={{ fontSize: "16px" }}>Японія</h3>
-          </div>
+          {countries.map((country) => (
+            <div className="filter-by-country-btn">
+              <h3 key={country} style={{ fontSize: "16px" }}>
+                {country}
+              </h3>
+            </div>
+          ))}
         </div>
         <div className="filter-by-manufacture">
           <div className="filter-by-manufacture-text">
@@ -88,7 +73,7 @@ export default function Catalog() {
           </div>
         </div>
         <div className="catalog-table">
-          <div className="catalog-item">
+          <Link to="/catalog/1" className="catalog-item">
             <div className="catalog-item-img-wrapper">
               <img className="catalog-item-img" src={ITEM_1} alt="" />
             </div>
@@ -102,7 +87,7 @@ export default function Catalog() {
                 серія
               </h3>
             </div>
-          </div>
+          </Link>
           <div className="catalog-item">
             <div className="catalog-item-img-wrapper">
               <img className="catalog-item-img" src={ITEM_2} alt="" />
