@@ -2,356 +2,152 @@ import React from "react";
 import "./CatalogItemPage.css";
 import { useParams } from "react-router";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import IMG_1 from "../Assets/ITEM_1.jpg";
-import IMG_2 from "../Assets/ITEM_2.jpg";
-import IMG_3 from "../Assets/ITEM_3.jpg";
+
 import CatalogPageTable from "../CatalogPageTable/CatalogPageTable";
-
-const ContentBlocks = {
-  title: ({ children, level = 1 }) => {
-    const Tag = `h${level}`;
-    return <Tag className="">{children}</Tag>;
-  },
-
-  boldText: ({ children }) => <h2 className="">{children}</h2>,
-
-  regularText: ({ children }) => (
-    <h2 className="catalog-item-regular-text">{children}</h2>
-  ),
-
-  boldAndRegularText: (children) => {
-    const { items = [] } = children;
-
-    return (
-      <div className="catalog-item-bold-and-regular-text-wrapper">
-        {items.map((item, index) => (
-          <div className="catalog-item-bold-and-regular-text" key={index}>
-            <h2 className="catalog-item-bold-and-regular-text-b">
-              {item.boldText}:{" "}
-            </h2>
-            <h2 className="catalog-item-bold-and-regular-text-r">
-              {item.regularText && ` ${item.regularText}`}
-            </h2>
-          </div>
-        ))}
-      </div>
-    );
-  },
-
-  column: ({ children, columns = 2 }) => (
-    <div className={`grid grid-cols-1 md:grid-cols-${columns} gap-6 mb-6`}>
-      {children.map((item, index) => (
-        <div key={index}>
-          {typeof item === "string" ? (
-            <h2 className="text-base mb-3 text-gray-600 leading-relaxed">
-              {item}
-            </h2>
-          ) : (
-            <ContentRenderer content={[item]} />
-          )}
-        </div>
-      ))}
-    </div>
-  ),
-
-  image: ({ src, alt }) => (
-    <img className="catalog-item-image" src={src} alt={alt} />
-  ),
-
-  quote: ({ children, author }) => (
-    <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700 mb-4">
-      <h2>{children}</h2>
-      {author && (
-        <cite className="block text-sm text-gray-500 mt-2">— {author}</cite>
-      )}
-    </blockquote>
-  ),
-};
-
-const ContentRenderer = ({ content }) => {
-  return (
-    <div className="catalog-item-page">
-      {content.map((block, index) => {
-        const Component = ContentBlocks[block.type];
-        if (!Component) {
-          console.warn(`Unknown block type: ${block.type}`);
-          return null;
-        }
-
-        return (
-          <Component key={index} {...block.props}>
-            {block.content}
-          </Component>
-        );
-      })}
-    </div>
-  );
-};
-
-const Article_Lamassu = [
-  {
-    type: "image",
-    content: "",
-    props: {
-      src: IMG_1,
-      alt: "Порцеляна",
-      caption: "Ламассу",
-    },
-  },
-  {
-    type: "boldAndRegularText",
-    content: "",
-    props: {
-      items: [
-        {
-          boldText: "Країна",
-          regularText: "Іспанія",
-        },
-        {
-          boldText: "Мануфактура",
-          regularText: "Lladró",
-        },
-        {
-          boldText: "Дата створення",
-          regularText: "2009",
-        },
-        {
-          boldText: "Скульптор",
-          regularText: "Marco Antonio Nogueron",
-        },
-        {
-          boldText: "Розмір (см)",
-          regularText: "51x53",
-        },
-        {
-          boldText: "Лімітована серія",
-          regularText: "",
-        },
-      ],
-    },
-  },
-
-  {
-    type: "regularText",
-    content: `Пергамський музей (чи, як його ще називають, Пергамон) у Берліні щороку відвідує щонайменше мільйон (!) туристів. Він вражає не лише своїми масштабами, а й унікальною колекцією експонатів, більшість із яких відноситься до дохристиянської доби. Так ось серед цих експонатів мою увагу привернули величезні статуї месопотамських демонів, духів-охоронців людини та її оселі, найчастіше зображуваних у вигляді постаті бика з чоловічим обличчям та крилами. Справа в тому, що таке ж порцелянове диво представлене і в експозиції нашого музею у Києві.`,
-  },
-
-  {
-    type: "regularText",
-    content: `До речі, своєю появою на світ Пергамський музей завдячує німецькому інженеру Карлу Хуману, який керував прокладанням нової дороги в одній із провінцій Малої Азії. У 1878 році під час будівельних робіт йому пощастило наткнутися на руїни античного фризу, прикрашеного барельєфними скульптурами античних героїв та олімпійських богів. Це був легендарний Пергамський вівтар Зевса, який сьогодні вважається головним надбанням музейної колекції Пергамона. Однак коли дивовижну знахідку переправили до Берліна, з'ясувалося, що виставляти її практично нема де. Тоді й було прийнято рішення про будівництво окремої споруди, здатної вмістити в себе не лише цей артефакт, а й численні експонати давньоазіатської та античної скульптури. Так з'явився перший Пергамський музей, який проіснував трохи більше 5 років і був знесений після появи величезних тріщин у фундаменті.`,
-  },
-
-  {
-    type: "regularText",
-    content: `Будівництво другої будівлі почалося майже одразу, проте роботи над ним раз у раз відкладалися. Спочатку їм завадила смерть головного архітектора, якому довго шукали заміну, а потім - Перша світова війна і фінансова криза, яка послідувала за нею, помітно підкосила економічну ситуацію в країні. У результаті новий музейний комплекс було відкрито лише в 1930 році – через 23 роки після закладання першого каменю.`,
-  },
-
-  {
-    type: "regularText",
-    content: `Однак на цьому негаразди в долі Пергамона не скінчилися. Під час Другої світової війни він сильно постраждав від повітряного обстрілу, а потім втратив і основну частину своїх експонатів – їх вивезли на територію тодішнього СРСР. Через кілька десятиліть частина колекції повернулася до Берліна, але деякі рідкісні експонати досі перебувають у музеях Петербурга та Москви.`,
-  },
-
-  {
-    type: "regularText",
-    content: `Першим, що бачить відвідувач Пергамського музею, є велична брама богині Іштар, датована 6 століттям до нашої ери. Вони були знайдені під час розкопок Стародавнього Вавилону. Історики стверджують, що вони входили до складу Дороги процесій, яка використовується під час святкування головного свята країни – Нового року. На синій мозаїці, яка прикрашає ці ворота, можна розглянути барельєфи різних тварин, зображення міфологічних істот, які нагадують доісторичних ящерів, та клинописний напис, нанесений самим Навуходоносором.`,
-  },
-
-  {
-    type: "regularText",
-    content: `Навіть за дуже значних розмірів ця конструкція не є найбільшим експонатом музею. У будівлі Пергамона вдалося розмістити тільки зовнішню частину Іштар - внутрішні ж ворота, які є ще вищими, до нього просто не ввійшли. Є тут і сама Дорога процесій, що веде від Іштар до святилища Есагіла. Залишки керамічного панно, яке розташовувалося на стінах по обидва боки священної дороги, дозволили з абсолютною точністю відновити одне з головних чудес Стародавнього Вавилону.`,
-  },
-
-  {
-    type: "regularText",
-    content: `Архітектура та мистецтво ассирійської цивілізації вражали своїм розмахом. Археологи знайшли вхід до палацу Ашшурнасірапала II (883-859 р. до н. е.), який розташовувався в місті Німруд. Його прикрашали шестиметрові крилаті бики з людськими головами, вирізані з коричневого алебастру. Саме ці бики, які знаходяться зараз в одному із залів Пергамського музею, і надихнули сучасних іспанських майстрів на створення унікальної порцелянової роботи, представленої вашій увазі.`,
-  },
-
-  {
-    type: "regularText",
-    content: `До речі, слідуючи жорстокій політиці рабовласницької імперії, з другої половини VIII століття до н. е. Ассирія зуміла захопити Месопотамію, Палестину, Кіпр, сучасні території Туреччини, Сирії, а також Єгипет. Коли в захоплених містах починалося повстання, ассірійці безжально карали бунтівників. Так сталося і з Вавилоном в 689 року до н. е., коли після повстання правитель Синнехеріб зрівняв місто із землею…`,
-  },
-];
-
-const Article_Three_Sisters = [
-  {
-    type: "image",
-    content: "",
-    props: {
-      src: IMG_2,
-      alt: "Порцеляна",
-      caption: "Три сестри",
-    },
-  },
-  {
-    type: "boldAndRegularText",
-    content: "",
-    props: {
-      items: [
-        {
-          boldText: "Країна",
-          regularText: "Іспанія",
-        },
-        {
-          boldText: "Мануфактура",
-          regularText: "Lladró",
-        },
-        {
-          boldText: "Дата створення",
-          regularText: "1986",
-        },
-        {
-          boldText: "Скульптор",
-          regularText: "José Puche",
-        },
-        {
-          boldText: "Розмір (см)",
-          regularText: "35x34",
-        },
-        {
-          boldText: "Лімітована серія",
-          regularText: "",
-        },
-      ],
-    },
-  },
-
-  {
-    type: "regularText",
-    content: `У Китаї я був двічі. І обидва рази вже досить давно. Причому так давно, що особливого інтересу до порцеляни тоді ще не виявляв практично зовсім. І тому тягнув додому з тих поїздок різноманітну екзотичну всячину, яка хоч чимось через довгі роки могла б нагадувати мені про ці поїздки. Серед цієї всячини були і дерев'яні дощечки з інкрустацією з річкового перламутру, і малесенькі пляшечки для парфумів, майстерно розписані зсередини (!) картинками китайського життя, і двосторонні пейзажі, вишиті на шовку вручну без жодного вузлика! Уявляєте такі чудеса народної творчості?!`,
-  },
-
-  {
-    type: "regularText",
-    content: `Але абсолютним верхом усієї цієї неймовірної "заморської" екзотики були 12 найтоншої ручної роботи жіночих фігурок, вирізаних із кістки буйвола. Мені (здається, це було в Шанхаї) пояснили, що зроблено цю серію було за мотивами класичного китайського роману, присвяченого 12 сестрам. Фігурки, не схожі одна на одну, багато років займали помітне місце в мене вдома і на роботі, поки згодом їх не витіснили звідти вироби з порцеляни, колекціонуванням якої ми всерйоз захопилися. І однією з робіт, що витіснили чудових китайських сестер, була сьогоднішня композиція, присвячена трьом іспанським сестрам.`,
-  },
-
-  {
-    type: "regularText",
-    content: `Між ними не було, мабуть, жодного зв'язку. Ну, хіба що крім того, що напівпрозорі парасольки в руках іспанських сестер були створені з використанням китайського шовку, який закладається фарфористами у виріб, а під час випалу в печі (при температурі в 1200-1300 градусів), згоряючи, утворює безліч тонких дірочок, які роблять фрагмент порцелянового виробу (чи оборок жіночої сукні, чи парасольки) повітряно-напівпрозорим. А якщо вам ще вдасться розглянути найдрібніші квіти, якими прикрашені парасольки на цій композиції, а також фактуру тканини, яка передає красу суконь сестер, а також вирази героїнь і тоненькі пальчики, -- тоді ви напевне зможете зрозуміти, чому з тисяч інших робіт цей виріб мені в нашій колекції здається одним із найбільш незабутніх.`,
-  },
-
-  {
-    type: "regularText",
-    content: `А ще він мені дуже нагадує трьох прекрасних дам, з якими ми дружимо багато років і які мають безпосереднє відношення до нашого захоплення порцеляною. Три покоління Єгорових – Світлана, Дар'я та Поліна – відіграли особливу роль у тому, що всім своїм захопленням ми з часом віддали перевагу саме фарфору. І великою мірою саме іспанському. Світлана Василівна та Даша багато років представляють в Україні нашу улюблену валенсійську мануфактуру Lladro. І розумінню нами фарфорової краси багато в чому сприяли їхні розповіді про фарфор і наші спільні поїздки місцями його «природного існування» у Валенсії.`,
-  },
-];
-
-const Article_Easter_Moon = [
-  {
-    type: "image",
-    content: "",
-    props: {
-      src: IMG_3,
-      alt: "Порцеляна",
-      caption: "Східний місяць",
-    },
-  },
-  {
-    type: "boldAndRegularText",
-    content: "",
-    props: {
-      items: [
-        {
-          boldText: "Країна",
-          regularText: "Іспанія",
-        },
-        {
-          boldText: "Мануфактура",
-          regularText: "Lladró",
-        },
-        {
-          boldText: "Дата створення",
-          regularText: "2008",
-        },
-        {
-          boldText: "Скульптор",
-          regularText: "Joan Coderch",
-        },
-        {
-          boldText: "Розмір (см)",
-          regularText: "34x32",
-        },
-        {
-          boldText: "Лімітована серія",
-          regularText: "",
-        },
-      ],
-    },
-  },
-
-  {
-    type: "regularText",
-    content: `Мені дуже подобається ця порцелянова композиція. У ній так багато всього раніше побаченого, яке надовго запам'яталося в поїздках до Китаю і Японії. І чітко окреслені елементи жіночого оздоблення на головній героїні роботи, і використання різних технік у створенні ефекту об'ємності простору, і найтонші пелюстки квітів, які прикрашають дерево.`,
-  },
-
-  {
-    type: "regularText",
-    content: `Все це не може не приковувати увагу глядача, викликаючи інтерес до найдрібніших деталей твору. Але найцікавіше навіть не в цьому. А в... самому місяці! На жаль, мені не вдасться показати вам цей неймовірний ефект, але описати його спробую.
-
-`,
-  },
-
-  {
-    type: "regularText",
-    content: `Так ось. Якщо на задній план цієї роботи поставити невеликий світильник і включити його, то стане помітним жовте свічення місячного диска, який ніби завис у 3D-просторі цієї незвичайної композиції. Досягається такий ефект додаванням до фарфорової маси перед випалом компонентів, які викликають дивовижне внутрішнє світіння місячного диска при просвічуванні його джерелом світла.`,
-  },
-
-  {
-    type: "regularText",
-    content: `Цей ефект був винайдений кілька століть тому японськими та корейськими майстрами порцеляни.`,
-  },
-  {
-    type: "regularText",
-    content: `І я одного разу вже розповідав про те, як до цієї хитрості вдавалися майстри японської мануфактури Сацума. Вони примудрялися в тонке дно чайних чашок, виготовлених із кістяної порцеляни, запікати портрети гейш. При природному висвітленні ці портрети не видно. Але як тільки ви чимось підсвітите денце чашки, на ньому чітко проступають найтонші деталі портрета красивої японської жінки.`,
-  },
-  {
-    type: "regularText",
-    content: `У роботі, представленій до вашої уваги, іспанським майстрам по-своєму вдалося використати ефект своїх японських колег. Причому, це було зроблено у виробі, створеному за східними мотивами. Ну, і крім того, останнім часом стільки всього було розказано і показано по телебаченню про досить рідкісний збіг в один день місячних подій - і супермісяць, і «кривавий місяць», і «блакитний місяць» - що мені якось захотілося завершити короткою порцеляновою історією всю цю «місячну» епопею. Тим більше, що за прогнозами астрологів наступне таке явище слід чекати не раніше 2034-го року.`,
-  },
-];
+import DataSheet from "../DataSheet/DataSheet";
 
 export default function MuseumApp() {
   const params = useParams();
   const pageId = params.id;
+  const dataSheet = DataSheet;
+  const [isLoading, setIsLoading] = React.useState(true);
 
-  const [currentArticle, setCurrentArticle] = React.useState(pageId);
+  const [currentArticle, setCurrentArticle] = React.useState("");
+  const [currentArticleExtendedData, setCurrentArticleExtendedData] =
+    React.useState("");
 
-  console.log("page id " + pageId);
-  console.log("current page " + currentArticle);
+  React.useEffect(() => {
+    const findArticles = () => {
+      let articlesArray = dataSheet.find((item) => item.url_title === pageId);
+      if (articlesArray) {
+        setCurrentArticle(articlesArray.article_data);
+      }
+      if (articlesArray) {
+        setCurrentArticleExtendedData(articlesArray);
+      }
+      if (articlesArray.url_title === pageId) {
+        return setIsLoading(false);
+      }
+    };
+    findArticles();
+  }, [pageId]);
 
-  const articles = {
-    1: Article_Lamassu,
-    2: Article_Three_Sisters,
-    3: Article_Easter_Moon,
+  const ContentBlocks = {
+    title: ({ children, level = 1 }) => {
+      const Tag = `h${level}`;
+      return <Tag className="">{children}</Tag>;
+    },
+
+    boldText: ({ children }) => <h2 className="">{children}</h2>,
+
+    regularText: ({ children }) => (
+      <h2 className="catalog-item-regular-text">{children}</h2>
+    ),
+
+    boldAndRegularText: (children) => {
+      const { items = [] } = children;
+
+      return (
+        <div className="catalog-item-bold-and-regular-text-wrapper">
+          {items.map((item, index) => (
+            <div className="catalog-item-bold-and-regular-text" key={index}>
+              <h2 className="catalog-item-bold-and-regular-text-b">
+                {item.boldText}:{" "}
+              </h2>
+              <h2 className="catalog-item-bold-and-regular-text-r">
+                {item.regularText && ` ${item.regularText}`}
+              </h2>
+            </div>
+          ))}
+        </div>
+      );
+    },
+
+    column: ({ children, columns = 2 }) => (
+      <div className={`grid grid-cols-1 md:grid-cols-${columns} gap-6 mb-6`}>
+        {children.map((item, index) => (
+          <div key={index}>
+            {typeof item === "string" ? (
+              <h2 className="text-base mb-3 text-gray-600 leading-relaxed">
+                {item}
+              </h2>
+            ) : (
+              <ContentRenderer content={[item]} />
+            )}
+          </div>
+        ))}
+      </div>
+    ),
+
+    image: ({ src, alt }) => (
+      <img className="catalog-item-image" src={src} alt={alt} />
+    ),
+
+    quote: ({ children, author }) => (
+      <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700 mb-4">
+        <h2>{children}</h2>
+        {author && (
+          <cite className="block text-sm text-gray-500 mt-2">— {author}</cite>
+        )}
+      </blockquote>
+    ),
+  };
+
+  const ContentRenderer = ({ content }) => {
+    console.log(content);
+
+    return (
+      <div className="catalog-item-page">
+        {content.map((block, index) => {
+          const Component = ContentBlocks[block.type];
+          if (!Component) {
+            console.warn(`Unknown block type: ${block.type}`);
+            return null;
+          }
+          return (
+            <Component key={index} {...block.props}>
+              {block.content}
+            </Component>
+          );
+        })}
+      </div>
+    );
   };
 
   return (
     <div className="catalog-item-page-wrapper">
-      <div className="section">
-        <div className="page-title-wrapper">
-          <div className="page-title">
-            <h1>Експонати музею</h1>
-          </div>
-          <div className="redirect-tree">
-            <h2>Головна</h2>
-            <div className="redirect-tree-icon">
-              <NavigateNextIcon />
+      {isLoading ? (
+        <>Loading</>
+      ) : (
+        <>
+          <div className="section">
+            <div className="page-title-wrapper">
+              <div className="page-title">
+                <h1>{currentArticleExtendedData.title_ua}</h1>
+              </div>
+              <div className="redirect-tree">
+                <h2>Головна</h2>
+                <div className="redirect-tree-icon">
+                  <NavigateNextIcon />
+                </div>
+                <h2>Експонати музею</h2>
+                <div className="redirect-tree-icon">
+                  <NavigateNextIcon />
+                </div>
+                <h2>{currentArticleExtendedData.country_ua}</h2>
+              </div>
             </div>
-            <h2>Експонати музею</h2>
           </div>
-        </div>
-      </div>
 
-      <div className="main-section">
-        <ContentRenderer content={articles[currentArticle]} />
-        <h1 className="catalog-item-page-else-title">
-          Дивитися інші експонати
-        </h1>
-        <CatalogPageTable
-          setArtcle={setCurrentArticle}
-          article={currentArticle}
-        />
-      </div>
+          <div className="main-section">
+            <ContentRenderer content={currentArticle} />
+            <h1 className="catalog-item-page-else-title">
+              Дивитися інші експонати
+            </h1>
+            <CatalogPageTable setArtcle={currentArticle} data={dataSheet} />
+          </div>
+        </>
+      )}
     </div>
   );
 }

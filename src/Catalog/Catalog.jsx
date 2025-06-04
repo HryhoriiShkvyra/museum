@@ -2,8 +2,13 @@ import React from "react";
 import "./Catalog.css";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import CatalogPageTable from "../CatalogPageTable/CatalogPageTable";
+import DataSheet from "../DataSheet/DataSheet";
 
 export default function Catalog() {
+  // const [filterCountry, setFilterCountry] = React.useState("всі мануфактури");
+
+  const dataSheet = DataSheet;
+
   const countries = [
     "Австрія",
     "Англія",
@@ -39,8 +44,8 @@ export default function Catalog() {
 
       <div className="main-section">
         <div className="filter-by-country">
-          {countries.map((country) => (
-            <div className="filter-by-country-btn">
+          {countries.map((country, index) => (
+            <div key={index + "_" + country} className="filter-by-country-btn">
               <h3 key={country} style={{ fontSize: "16px" }}>
                 {country}
               </h3>
@@ -70,7 +75,7 @@ export default function Catalog() {
             <h2>Всі мануфактури</h2>
           </div>
         </div>
-        <CatalogPageTable />
+        <CatalogPageTable data={dataSheet} />
       </div>
     </div>
   );
