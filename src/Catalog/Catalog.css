@@ -6,7 +6,7 @@
   margin: 40px auto 0;
 }
 
-.filter-by-country div {
+.filter-by-country-btn {
   display: flex;
   padding: 20px;
   margin-right: 20px;
@@ -14,12 +14,31 @@
   transition: all ease 0.5s;
 }
 
-.filter-by-country div:hover {
+.filter-by-country-btn-active {
+  padding: 20px;
+  margin-right: 20px;
+
+  background-color: var(--grey-80);
+  border-radius: 20px;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.filter-by-country-btn:hover {
   padding: 20px;
   background-color: var(--grey-80);
   border-radius: 20px;
   transition: all ease 0.5s;
+  cursor: pointer;
 }
+
+/* .filter-by-country div:hover {
+  padding: 20px;
+  background-color: var(--grey-80);
+  border-radius: 20px;
+  transition: all ease 0.5s;
+  cursor: pointer;
+} */
 
 .filter-by-manufacture {
   display: flex;
@@ -35,16 +54,41 @@
 }
 
 .filter-by-manufacture-text {
-  padding-right: 10px;
+  padding: 0px 10px 5px 0;
   font-weight: 600;
 }
 
-.filter-by-manufacture-title {
+.filter-by-manufacture-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.filter-by-manufacture-title-text {
   padding: 5px 12px;
   border-right: 1px solid var(--grey-200);
   color: var(--grey-500);
+  cursor: pointer;
 }
 
-.filter-by-manufacture-title:last-child {
+.filter-by-manufacture-title-text:last-child {
   border-right: none;
+}
+
+.filter-by-manufacture-title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid transparent;
+  transition: all ease 0.5s;
+}
+
+.filter-by-manufacture-title-text:hover > .filter-by-manufacture-title {
+  border-bottom: 1px solid var(--grey-500);
+  transition: all ease 0.5s;
+}
+
+.filter-by-manufacture-title-active {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--grey-500);
+  transition: all ease 0.5s;
 }

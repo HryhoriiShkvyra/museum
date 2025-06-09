@@ -5,7 +5,9 @@ import CatalogPageTable from "../CatalogPageTable/CatalogPageTable";
 import DataSheet from "../DataSheet/DataSheet";
 
 export default function Catalog() {
-  // const [filterCountry, setFilterCountry] = React.useState("всі мануфактури");
+  const [sortByCountry, setSortByCountry] = React.useState("");
+  const [sortNyManufacture, setSortByManufacture] =
+    React.useState("Всі мануфактури");
 
   const dataSheet = DataSheet;
 
@@ -24,6 +26,22 @@ export default function Catalog() {
     "Чехія",
     "Японія",
   ];
+
+  const manufactures = [
+    "Lladró",
+    "Dragon China",
+    "Без бренду",
+    "Volkstedt",
+    "Wedgwood",
+    "Всі мануфактури",
+  ];
+
+  const manufactureSetter = (manufacture) => {
+    return setSortByManufacture(manufacture), setSortByCountry("");
+  };
+  const countrySetter = (country) => {
+    return setSortByCountry(country), setSortByManufacture("");
+  };
 
   return (
     <div className="Catalog">
@@ -45,7 +63,15 @@ export default function Catalog() {
       <div className="main-section">
         <div className="filter-by-country">
           {countries.map((country, index) => (
-            <div key={index + "_" + country} className="filter-by-country-btn">
+            <div
+              key={index + "_" + country}
+              onClick={(e) => countrySetter(country)}
+              className={
+                sortByCountry === country
+                  ? "filter-by-country-btn-active"
+                  : "filter-by-country-btn"
+              }
+            >
               <h3 key={country} style={{ fontSize: "16px" }}>
                 {country}
               </h3>
@@ -56,7 +82,26 @@ export default function Catalog() {
           <div className="filter-by-manufacture-text">
             <h2>Мануфактури :</h2>
           </div>
-          <div className="filter-by-manufacture-title">
+          <div className="filter-by-manufacture-wrapper">
+            {manufactures.map((manufacture, index) => (
+              <div
+                onClick={(e) => manufactureSetter(manufacture)}
+                className="filter-by-manufacture-title-text"
+                key={manufacture + "-" + index}
+              >
+                <div
+                  className={
+                    sortNyManufacture === manufacture
+                      ? "filter-by-manufacture-title-active"
+                      : "filter-by-manufacture-title"
+                  }
+                >
+                  <h2>{manufacture}</h2>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* <div className="filter-by-manufacture-title">
             <h2>Lladró</h2>
           </div>
           <div className="filter-by-manufacture-title">
@@ -73,9 +118,13 @@ export default function Catalog() {
           </div>
           <div className="filter-by-manufacture-title">
             <h2>Всі мануфактури</h2>
-          </div>
+          </div> */}
         </div>
-        <CatalogPageTable data={dataSheet} />
+        <CatalogPageTable
+          sortByManufacture={sortNyManufacture}
+          sortByCountry={sortByCountry}
+          data={dataSheet}
+        />
       </div>
     </div>
   );

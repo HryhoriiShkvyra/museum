@@ -62,6 +62,7 @@
 
 .navbar-lang-btn-wrapper:hover .navbar-lang-btn {
   border-bottom: 1px solid var(--grey-600);
+  background-color: blue;
 }
 
 .navbar-lang-btn-wrapper-active {

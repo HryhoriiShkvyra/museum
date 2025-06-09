@@ -144,7 +144,7 @@ export default function MuseumApp() {
             <h1 className="catalog-item-page-else-title">
               Дивитися інші експонати
             </h1>
-            <CatalogPageTable setArtcle={currentArticle} data={dataSheet} />
+            <CatalogPageTable setArticle={setCurrentArticle} data={dataSheet} />
           </div>
         </>
       )}
