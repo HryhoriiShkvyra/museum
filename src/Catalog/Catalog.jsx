@@ -5,6 +5,7 @@ import CatalogPageTable from "../CatalogPageTable/CatalogPageTable";
 import DataSheet from "../DataSheet/DataSheet";
 
 export default function Catalog() {
+  const tableState = "regular";
   const [sortByCountry, setSortByCountry] = React.useState("");
   const [sortNyManufacture, setSortByManufacture] =
     React.useState("Всі мануфактури");
@@ -101,29 +102,12 @@ export default function Catalog() {
               </div>
             ))}
           </div>
-          {/* <div className="filter-by-manufacture-title">
-            <h2>Lladró</h2>
-          </div>
-          <div className="filter-by-manufacture-title">
-            <h2>Dragon China</h2>
-          </div>
-          <div className="filter-by-manufacture-title">
-            <h2>Без бренду</h2>
-          </div>
-          <div className="filter-by-manufacture-title">
-            <h2>Volkstedt</h2>
-          </div>
-          <div className="filter-by-manufacture-title">
-            <h2>Wedgwood</h2>
-          </div>
-          <div className="filter-by-manufacture-title">
-            <h2>Всі мануфактури</h2>
-          </div> */}
         </div>
         <CatalogPageTable
           sortByManufacture={sortNyManufacture}
           sortByCountry={sortByCountry}
           data={dataSheet}
+          tableState={tableState}
         />
       </div>
     </div>

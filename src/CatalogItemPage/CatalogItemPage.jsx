@@ -11,7 +11,8 @@ export default function MuseumApp() {
   const pageId = params.id;
   const dataSheet = DataSheet;
   const [isLoading, setIsLoading] = React.useState(true);
-
+  const tableState = "three-items";
+  // const [tableState, setTableState] = React.useState("three-item")
   const [currentArticle, setCurrentArticle] = React.useState("");
   const [currentArticleExtendedData, setCurrentArticleExtendedData] =
     React.useState("");
@@ -144,7 +145,11 @@ export default function MuseumApp() {
             <h1 className="catalog-item-page-else-title">
               Дивитися інші експонати
             </h1>
-            <CatalogPageTable setArticle={setCurrentArticle} data={dataSheet} />
+            <CatalogPageTable
+              setArticle={setCurrentArticle}
+              data={dataSheet}
+              tableState={tableState}
+            />
           </div>
         </>
       )}
