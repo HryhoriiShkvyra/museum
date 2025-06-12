@@ -576,7 +576,7 @@ const DataSheet = [
   {
     url_title: "the_vase",
     title_ua: "Ваза",
-    manufacture: "без бренду",
+    manufacture: "Без бренду",
     country: "China",
     country_ua: "Китай",
     src: IMG_8,
@@ -720,7 +720,7 @@ const DataSheet = [
     title_ua: "Карета",
     manufacture: "Volkstedt",
     country: "Germany",
-    country_ua: "Германія",
+    country_ua: "Німеччина",
     src: IMG_10,
     about: `Країна: Німеччина Мануфактура: Volkstedt Дата створення: 1930-ті Розмір (см): 42x106`,
     article_data: [
@@ -793,6 +793,7 @@ const DataSheet = [
     title_ua: "Тарілка",
     country: "Turkey",
     country_ua: "Туреччина",
+    manufacture: "Без бренду",
     src: IMG_11,
     about: `Країна: Туреччина Дата створення: 2019 Розмір (см): 50`,
     article_data: [
