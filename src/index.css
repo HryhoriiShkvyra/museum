@@ -196,10 +196,50 @@ h4 {
 .section {
   max-width: 1120px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .main-section {
   max-width: 1120px;
   margin: 0 auto;
   padding: 35px 15px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+  .section,
+  .main-section {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 801px) {
+  .section,
+  .main-section {
+    padding: 0 75px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section,
+  .main-section {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section,
+  .main-section {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section {
+    padding: 0 50px;
+  }
+
+  .main-section {
+    padding: 0 30px;
+  }
 }

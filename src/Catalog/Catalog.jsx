@@ -81,7 +81,7 @@ export default function Catalog() {
         </div>
         <div className="filter-by-manufacture">
           <div className="filter-by-manufacture-text">
-            <h2>Мануфактури :</h2>
+            <h2>Мануфактури </h2>:<h2></h2>{" "}
           </div>
           <div className="filter-by-manufacture-wrapper">
             {manufactures.map((manufacture, index) => (

@@ -9,7 +9,6 @@
 .filter-by-country-btn {
   display: flex;
   padding: 20px;
-  margin-right: 20px;
 
   text-transform: capitalize;
   transition: all ease 0.5s;
@@ -36,12 +35,13 @@
 }
 
 .filter-by-manufacture {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: start;
   align-items: center;
+  margin: 58px auto;
 
-  margin: 58px 25px;
+  /* margin: 58px 25px; */
 }
 
 .filter-by-manufacture:last-child {
@@ -49,20 +49,27 @@
 }
 
 .filter-by-manufacture-text {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
   padding: 0px 10px 5px 0;
   font-weight: 600;
+  text-align: inherit;
 }
 
 .filter-by-manufacture-wrapper {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  gap: 10px 0;
   justify-content: start;
   align-items: center;
 }
 
 .filter-by-manufacture-title-text {
-  padding: 5px 12px;
-  border-right: 1px solid var(--grey-200);
+  padding: 2px 12px;
+  border-right: 1px solid var(--grey-100);
   text-transform: capitalize;
 
   color: var(--grey-500);
@@ -74,7 +81,6 @@
 }
 
 .filter-by-manufacture-title {
-  padding-bottom: 5px;
   border-bottom: 1px solid transparent;
   transition: all ease 0.5s;
 }
@@ -88,4 +94,10 @@
   padding-bottom: 5px;
   border-bottom: 1px solid var(--grey-500);
   transition: all ease 0.5s;
+}
+
+@media screen and (max-width: 870px) {
+  .filter-by-manufacture {
+    align-items: normal;
+  }
 }
