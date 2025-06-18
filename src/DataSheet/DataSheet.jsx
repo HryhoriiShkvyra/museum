@@ -1210,7 +1210,7 @@ const DataSheet = [
     ],
   },
   {
-    url_title: "article_lamassu",
+    url_title: "vase",
     title_ua: "Вазочка",
     manufacture: "wedgwood",
     country: "england",

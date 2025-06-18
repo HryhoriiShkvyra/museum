@@ -55,6 +55,10 @@ const CatalogPageTable = ({
     filterElseItems();
   }, [tableState]);
 
+  React.useEffect(() => {
+    console.log(threeItems);
+  }, [threeItems]);
+
   const CatalogPageTableRenderLogic = () => {
     if (tableState === "regular") {
       if (sortByCountry === "австрія") {
@@ -99,9 +103,30 @@ const CatalogPageTable = ({
     } else if (tableState === "three-items") {
       if (country === "spain") {
         return CatalogPageTableRenderTemplate(threeItems);
-        // return console.log(threeItems);
-      } else if (sortByCountry === "Італія") {
-        return CatalogPageTableRenderTemplate(countries);
+      } else if (country === "austria") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "england") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "denmark") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "italy") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "china") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "netherlands") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "germany") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "turkey") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "ukraine") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "france") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "czech_republic") {
+        return CatalogPageTableRenderTemplate(threeItems);
+      } else if (country === "japan") {
+        return CatalogPageTableRenderTemplate(threeItems);
       } else return console.error("error");
     }
   };
@@ -114,13 +139,12 @@ const CatalogPageTable = ({
             <Link
               to={`/catalog/${item.country}/${item.url_title}`}
               onClick={(e) => setArticle(`${item.url_title}`)}
-              // onClick={(e) => pushToLocalStorage(item)}
               className="catalog-item-img-wrapper"
             >
               <img className="catalog-item-img" src={item.src} alt="" />
             </Link>
             <Link
-              to={`/catalog/${item.url_title}`}
+              to={`/catalog/${item.country}/${item.url_title}`}
               onClick={(e) => setArticle(`${item.url_title}`)}
               className="catalog-item-title"
             >
