@@ -10,15 +10,3 @@
   color: var(--white);
   font-weight: 600;
 }
-
-@media (min-height: 1300px) {
-  .footer {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-.footer-text {
-  /* display: flex; */
-  /* align-items: center; */
-}

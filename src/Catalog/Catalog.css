@@ -11,6 +11,7 @@
   padding: 20px;
   margin-right: 20px;
 
+  text-transform: capitalize;
   transition: all ease 0.5s;
 }
 
@@ -20,6 +21,8 @@
 
   background-color: var(--grey-80);
   border-radius: 20px;
+  text-transform: capitalize;
+
   transition: all ease 0.5s;
   cursor: pointer;
 }
@@ -31,14 +34,6 @@
   transition: all ease 0.5s;
   cursor: pointer;
 }
-
-/* .filter-by-country div:hover {
-  padding: 20px;
-  background-color: var(--grey-80);
-  border-radius: 20px;
-  transition: all ease 0.5s;
-  cursor: pointer;
-} */
 
 .filter-by-manufacture {
   display: flex;
@@ -68,6 +63,8 @@
 .filter-by-manufacture-title-text {
   padding: 5px 12px;
   border-right: 1px solid var(--grey-200);
+  text-transform: capitalize;
+
   color: var(--grey-500);
   cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./CatalogPageTable.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const CatalogPageTable = ({
   sortByManufacture,
@@ -9,24 +9,25 @@ const CatalogPageTable = ({
   setArticle,
   tableState,
 }) => {
-  console.log(data);
-  console.log(sortByCountry);
-  console.log(setArticle);
-  console.log(sortByManufacture);
-  console.log(tableState);
+  const { country } = useParams();
 
-  const [countries, setCountries] = React.useState("");
-  const [manufactures, setManufactures] = React.useState("");
+  const [countries, setCountries] = React.useState([]);
+  const [manufactures, setManufactures] = React.useState([]);
+  const [threeItems, setThreeItems] = React.useState([]);
 
   const filterByCountries = () => {
     const foundCountries = [];
     data.forEach((item) => {
       if (item.country_ua === sortByCountry) {
-        foundCountries.push(item);
+        return foundCountries.push(item);
       }
     });
     setCountries(foundCountries);
   };
+
+  React.useEffect(() => {
+    filterByCountries();
+  }, [sortByCountry]);
 
   const filterByManufacture = () => {
     const foundManufacture = [];
@@ -39,70 +40,79 @@ const CatalogPageTable = ({
   };
 
   React.useEffect(() => {
-    filterByCountries();
-  }, [sortByCountry]);
-
-  React.useEffect(() => {
     filterByManufacture();
   }, [sortByManufacture]);
 
+  const filterElseItems = () => {
+    const filteredItems = data
+      .filter((item) => item.country === country)
+      .slice(0, 3);
+
+    setThreeItems(filteredItems);
+  };
+
+  React.useEffect(() => {
+    filterElseItems();
+  }, [tableState]);
+
   const CatalogPageTableRenderLogic = () => {
     if (tableState === "regular") {
-      if (sortByCountry === "Австрія") {
+      if (sortByCountry === "австрія") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Італія") {
+      } else if (sortByCountry === "італія") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Англія") {
+      } else if (sortByCountry === "англія") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Данія") {
+      } else if (sortByCountry === "данія") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Іспанія") {
+      } else if (sortByCountry === "іспанія") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Китай") {
+      } else if (sortByCountry === "китай") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Нідерланди") {
+      } else if (sortByCountry === "нідерланди") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Німеччина") {
+      } else if (sortByCountry === "німеччина") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Туреччина") {
+      } else if (sortByCountry === "туреччина") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Україна") {
+      } else if (sortByCountry === "україна") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Франція") {
+      } else if (sortByCountry === "франція") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Чехія") {
+      } else if (sortByCountry === "чехія") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByCountry === "Японія") {
+      } else if (sortByCountry === "японія") {
         return CatalogPageTableRenderTemplate(countries);
-      } else if (sortByManufacture === "Всі мануфактури") {
+      } else if (sortByManufacture === "всі мануфактури") {
         return CatalogPageTableRenderTemplate(data);
-      } else if (sortByManufacture === "Lladró") {
+      } else if (sortByManufacture === "lladró") {
         return CatalogPageTableRenderTemplate(manufactures);
-      } else if (sortByManufacture === "Dragon China") {
+      } else if (sortByManufacture === "dragon China") {
         return CatalogPageTableRenderTemplate(manufactures);
-      } else if (sortByManufacture === "Без бренду") {
+      } else if (sortByManufacture === "без бренду") {
         return CatalogPageTableRenderTemplate(manufactures);
-      } else if (sortByManufacture === "Volkstedt") {
+      } else if (sortByManufacture === "volkstedt") {
         return CatalogPageTableRenderTemplate(manufactures);
-      } else if (sortByManufacture === "Wedgwood") {
+      } else if (sortByManufacture === "wedgwood") {
         return CatalogPageTableRenderTemplate(manufactures);
       } else return console.error("error");
     } else if (tableState === "three-items") {
-      if (sortByCountry === "Lladró") {
-        return CatalogPageTableRenderTemplate(manufactures);
+      if (country === "spain") {
+        return CatalogPageTableRenderTemplate(threeItems);
+        // return console.log(threeItems);
       } else if (sortByCountry === "Італія") {
         return CatalogPageTableRenderTemplate(countries);
-      }
+      } else return console.error("error");
     }
   };
 
-  const CatalogPageTableRenderTemplate = (data) => {
+  const CatalogPageTableRenderTemplate = (item) => {
     return (
       <div className="catalog-table">
-        {data.map((item, index) => (
+        {item.map((item, index) => (
           <div key={index + " " + item.url_title} className="catalog-item">
             <Link
-              to={`/catalog/${item.url_title}`}
+              to={`/catalog/${item.country}/${item.url_title}`}
               onClick={(e) => setArticle(`${item.url_title}`)}
               // onClick={(e) => pushToLocalStorage(item)}
               className="catalog-item-img-wrapper"
@@ -123,66 +133,6 @@ const CatalogPageTable = ({
         ))}
       </div>
     );
-  };
-
-  const CataloPageTableRender = () => {
-    if (sortByCountry === "") {
-      return (
-        <>
-          {" "}
-          {data.map((item, index) => (
-            <div key={index + " " + item.url_title} className="catalog-item">
-              <Link
-                to={`/catalog/${item.url_title}`}
-                onClick={(e) => setArticle(`${item.url_title}`)}
-                // onClick={(e) => pushToLocalStorage(item)}
-                className="catalog-item-img-wrapper"
-              >
-                <img className="catalog-item-img" src={item.src} alt="" />
-              </Link>
-              <Link
-                to={`/catalog/${item.url_title}`}
-                onClick={(e) => setArticle(`${item.url_title}`)}
-                className="catalog-item-title"
-              >
-                <h1>{item.title_ua}</h1>
-              </Link>
-              <div className="catalog-item-about">
-                <h3>{item.about}</h3>
-              </div>
-            </div>
-          ))}
-        </>
-      );
-    } else if (sortByCountry === "Австрія") {
-      return (
-        <>
-          {" "}
-          {countries.map((item, index) => (
-            <div key={index + " " + item.url_title} className="catalog-item">
-              <Link
-                to={`/catalog/${item.url_title}`}
-                onClick={(e) => setArticle(`${item.url_title}`)}
-                // onClick={(e) => pushToLocalStorage(item)}
-                className="catalog-item-img-wrapper"
-              >
-                <img className="catalog-item-img" src={item.src} alt="" />
-              </Link>
-              <Link
-                to={`/catalog/${item.url_title}`}
-                onClick={(e) => setArticle(`${item.url_title}`)}
-                className="catalog-item-title"
-              >
-                <h1>{item.title_ua}</h1>
-              </Link>
-              <div className="catalog-item-about">
-                <h3>{item.about}</h3>
-              </div>
-            </div>
-          ))}
-        </>
-      );
-    }
   };
 
   return <CatalogPageTableRenderLogic />;

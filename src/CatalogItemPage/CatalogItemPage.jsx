@@ -95,7 +95,7 @@ export default function MuseumApp() {
   };
 
   const ContentRenderer = ({ content }) => {
-    console.log(content);
+    // console.log(content);
 
     return (
       <div className="catalog-item-page">

@@ -20,9 +20,9 @@ const DataSheet = [
   {
     url_title: "article_lamassu",
     title_ua: "Ламассу",
-    manufacture: "Lladró",
-    country: "Spain",
-    country_ua: "Іспанія",
+    manufacture: "lladró",
+    country: "spain",
+    country_ua: "іспанія",
     src: IMG_1,
     about: `  Країна: Іспанія Мануфактура: Lladro Дата створення: 2009 Скульптор: Marco Antonio Nogueron Розмір (см): 51x53 Лімітована серія`,
     article_data: [
@@ -115,9 +115,9 @@ const DataSheet = [
   {
     url_title: "article_three_sisters",
     title_ua: "Три сестри",
-    manufacture: "Lladró",
-    country: "Spain",
-    country_ua: "Іспанія",
+    manufacture: "lladró",
+    country: "spain",
+    country_ua: "іспанія",
     src: IMG_2,
     about: ` Країна: Іспанія Мануфактура: Lladro Дата створення: 1986 Скульптор: Jose Puche Розмір (см): 35x34 Лімітована серія`,
     article_data: [
@@ -190,9 +190,9 @@ const DataSheet = [
   {
     url_title: "article_eastern_moon",
     title_ua: "Східний місяць",
-    manufacture: "Lladró",
-    country: "Spain",
-    country_ua: "Іспанія",
+    manufacture: "lladró",
+    country: "spain",
+    country_ua: "іспанія",
     src: IMG_3,
     about: `Країна: Іспанія Мануфактура: Lladro Дата створення: 2008 Скульптор: Joan Coderch Розмір (см): 34x32`,
     article_data: [
@@ -275,9 +275,9 @@ const DataSheet = [
   {
     url_title: "before_the_hunt",
     title_ua: "Перед полюванням",
-    manufacture: "Augarten",
-    country: "Austria",
-    country_ua: "Австрія",
+    manufacture: "augarten",
+    country: "austria",
+    country_ua: "австрія",
     src: IMG_4,
     about: `Країна: Австрія Мануфактура: Augarten Дата створення: 1930-ті роки Розмір (см): 18x19`,
     article_data: [
@@ -342,9 +342,9 @@ const DataSheet = [
   {
     url_title: "diana_princess_of_wales",
     title_ua: "Діана, принцеса Уельська",
-    manufacture: "Augarten",
-    country: "England",
-    country_ua: "Англія",
+    manufacture: "augarten",
+    country: "england",
+    country_ua: "англія",
     src: IMG_5,
     about: `Країна: Англія Мануфактура: Royal Doulton Дата створення: 2007 Скульптор: T. Potts Висота (см): 20`,
     article_data: [
@@ -437,9 +437,9 @@ const DataSheet = [
   {
     url_title: "alone_on_the_farm",
     title_ua: "Одна на господарстві",
-    manufacture: "Royal Copenhagen",
-    country: "Denmark",
-    country_ua: "Данія",
+    manufacture: "royal Copenhagen",
+    country: "denmark",
+    country_ua: "данія",
     src: IMG_6,
     about: `Країна: Данія Мануфактура: Royal Copenhagen Дата створення: 1950-ті роки Розмір (см): 22х12 Лімітована серія`,
     article_data: [
@@ -509,9 +509,9 @@ const DataSheet = [
   {
     url_title: "pieta",
     title_ua: " П'єта",
-    manufacture: "Capodimonte",
-    country: "Italy",
-    country_ua: "Італія",
+    manufacture: "capodimonte",
+    country: "italy",
+    country_ua: "італія",
     src: IMG_7,
     about: `Країна: Данія Мануфактура: Royal Copenhagen Дата створення: 1950-ті роки Розмір (см): 22х12 Лімітована серія`,
     article_data: [
@@ -592,9 +592,9 @@ const DataSheet = [
   {
     url_title: "the_vase",
     title_ua: "Ваза",
-    manufacture: "Без бренду",
-    country: "China",
-    country_ua: "Китай",
+    manufacture: "без бренду",
+    country: "china",
+    country_ua: "китай",
     src: IMG_8,
     about: `Країна: Китай Дата створення: 1950-ті роки Висота (см): 58`,
     article_data: [
@@ -668,9 +668,9 @@ const DataSheet = [
   {
     url_title: "portrait_of_hieronymus_holtschuer_by_albrecht_durer",
     title_ua: "Портрет Ієроніма Хольтшуера пензля Альбрехта Дюрера",
-    manufacture: "Delfts",
-    country: "Netherlands",
-    country_ua: "Нідерланди",
+    manufacture: "delfts",
+    country: "netherlands",
+    country_ua: "нідерланди",
     src: IMG_9,
     about: `Країна: Нідерланди Мануфактура: Delfts Дата створення: перша половина ХХ століття Діаметр (см): 55`,
     article_data: [
@@ -737,9 +737,9 @@ const DataSheet = [
   {
     url_title: "carriage",
     title_ua: "Карета",
-    manufacture: "Volkstedt",
-    country: "Germany",
-    country_ua: "Німеччина",
+    manufacture: "volkstedt",
+    country: "germany",
+    country_ua: "німеччина",
     src: IMG_10,
     about: `Країна: Німеччина Мануфактура: Volkstedt Дата створення: 1930-ті Розмір (см): 42x106`,
     article_data: [
@@ -813,9 +813,9 @@ const DataSheet = [
   {
     url_title: "plate",
     title_ua: "Тарілка",
-    country: "Turkey",
-    country_ua: "Туреччина",
-    manufacture: "Без бренду",
+    country: "turkey",
+    country_ua: "туреччина",
+    manufacture: "без бренду",
     src: IMG_11,
     about: `Країна: Туреччина Дата створення: 2019 Розмір (см): 50`,
     article_data: [
@@ -877,9 +877,9 @@ const DataSheet = [
   {
     url_title: "taras_bulba",
     title_ua: "Тарас Бульба",
-    manufacture: "Полонський ЗХК",
-    country: "Ukraine",
-    country_ua: "Україна",
+    manufacture: "полонський ЗХК",
+    country: "ukraine",
+    country_ua: "україна",
     src: IMG_12,
     about: `Країна: Україна Мануфактура: Полонський ЗХК Дата створення: 1970-ті роки Скульптор: К. Кузнєцов Розмір (см): 47`,
     article_data: [
@@ -941,9 +941,9 @@ const DataSheet = [
   {
     url_title: "lovers",
     title_ua: "Закохані",
-    manufacture: "Paris ",
-    country: "France",
-    country_ua: "Франція",
+    manufacture: "paris ",
+    country: "france",
+    country_ua: "франція",
     src: IMG_13,
     about: `Країна: Франція Мануфактура: Paris Дата створення: початок XX століття Розмір (см): 19х20`,
     article_data: [
@@ -1005,9 +1005,9 @@ const DataSheet = [
   {
     url_title: "tea_party",
     title_ua: "Чаювання",
-    manufacture: "Royal Dux Bohemia",
-    country: "Czech_republic",
-    country_ua: "Чехія",
+    manufacture: "royal Dux Bohemia",
+    country: "czech_republic",
+    country_ua: "чехія",
     src: IMG_14,
     about: `Країна: Чехія Мануфактура: Royal Dux Bohemia Дата створення: друга половина ХХ ст. Розмір (см): 35x41`,
     article_data: [
@@ -1073,8 +1073,9 @@ const DataSheet = [
   {
     url_title: "the_vase",
     title_ua: "Країна: Японія Дата створення: початок ХХ ст. Висота (см): 160",
-    country: "Japan",
-    country_ua: "Японія",
+    country: "japan",
+    country_ua: "японія",
+    manufacture: "без бренду",
     src: IMG_15,
     about: `Країна: Японія Дата створення: початок ХХ ст. Висота (см): 160`,
     article_data: [
@@ -1150,9 +1151,9 @@ const DataSheet = [
   {
     url_title: "saucer_and_sugar_bowl",
     title_ua: "Блюдце та цукорниця",
-    manufacture: "Dragon China",
-    country: "Japan",
-    country_ua: "Японія",
+    manufacture: "dragon China",
+    country: "japan",
+    country_ua: "японія",
     src: IMG_16,
     about: `Країна: Японія Мануфактура: Dragon China Дата створення: перша половина XX століття Розмір (см): 13x15`,
     article_data: [
@@ -1211,9 +1212,9 @@ const DataSheet = [
   {
     url_title: "article_lamassu",
     title_ua: "Вазочка",
-    manufacture: "Wedgwood",
-    country: "England",
-    country_ua: "Англія",
+    manufacture: "wedgwood",
+    country: "england",
+    country_ua: "англія",
     src: IMG_17,
     about: `Країна: Англія Мануфактура: Wedgwood Дата створення: 1960-ті роки Розмір (см): 17,5`,
     article_data: [

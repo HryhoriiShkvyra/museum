@@ -43,7 +43,7 @@ function App() {
           element: <Halls />,
         },
         { path: "/catalog", element: <Catalog /> },
-        { path: "/catalog/:id", element: <CatalogItemPage /> },
+        { path: "/catalog/:country/:id", element: <CatalogItemPage /> },
         { path: "/gallery", element: <Gallery /> },
         { path: "/news", element: <News /> },
         { path: "/news/:id", element: <PressAboutMuseum /> },

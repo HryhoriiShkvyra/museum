@@ -8,33 +8,33 @@ export default function Catalog() {
   const tableState = "regular";
   const [sortByCountry, setSortByCountry] = React.useState("");
   const [sortNyManufacture, setSortByManufacture] =
-    React.useState("Всі мануфактури");
+    React.useState("всі мануфактури");
 
   const dataSheet = DataSheet;
 
   const countries = [
-    "Австрія",
-    "Англія",
-    "Данія",
-    "Іспанія",
-    "Італія",
-    "Китай",
-    "Нідерланди",
-    "Німеччина",
-    "Туреччина",
-    "Україна",
-    "Франція",
-    "Чехія",
-    "Японія",
+    "австрія",
+    "англія",
+    "данія",
+    "іспанія",
+    "італія",
+    "китай",
+    "нідерланди",
+    "німеччина",
+    "туреччина",
+    "україна",
+    "франція",
+    "чехія",
+    "японія",
   ];
 
   const manufactures = [
-    "Lladró",
-    "Dragon China",
-    "Без бренду",
-    "Volkstedt",
-    "Wedgwood",
-    "Всі мануфактури",
+    "lladró",
+    "dragon China",
+    "без бренду",
+    "volkstedt",
+    "wedgwood",
+    "всі мануфактури",
   ];
 
   const manufactureSetter = (manufacture) => {
