@@ -43,13 +43,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 26px;
-  margin-top: 20px;
+
+  margin: 0 auto;
 }
 
 .hall-main-img {
-  max-width: 420px;
-  height: 280px;
-  background-color: aqua;
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 16/10;
 }
 
 .hall-main-img img {
