@@ -16,8 +16,6 @@ import { useParams } from "react-router-dom";
 const PressAboutMuseum = () => {
   const id = useParams();
 
-  console.log(id);
-
   return (
     <div className="press-about-museum">
       <div className="section">

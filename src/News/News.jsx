@@ -99,12 +99,7 @@ const News = () => {
               className="news-post"
             >
               {news.img ? (
-                <img
-                  className="news-img"
-                  src={news.img}
-                  //   src="https://placehold.co/600x400?text=IMG"
-                  alt="news.img"
-                ></img>
+                <img className="news-img" src={news.img} alt="news.img"></img>
               ) : (
                 <img
                   className="news-img"

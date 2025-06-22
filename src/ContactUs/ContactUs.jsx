@@ -78,8 +78,8 @@ export default function ContactUs() {
           <div className="contact-us-map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2539.909140204549!2d30.50495118356249!3d50.46141661457129!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf7df800e80f%3A0xe0a29a9e996f9b17!2sShvets%CA%B9muzey!5e0!3m2!1sen!2sua!4v1746714860966!5m2!1sen!2sua"
-              width="650"
-              height="450"
+              width="100%"
+              height="100%"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"

@@ -1,5 +1,4 @@
 .news {
-  /* margin-top: 25px; */
 }
 
 .news-post {
@@ -15,8 +14,9 @@
 }
 
 .news-img {
-  width: 600px;
-  margin-left: 35px;
+  max-width: 600px;
+  width: 100%;
+  padding: 0 35px;
 }
 
 .news-data {
@@ -24,4 +24,11 @@
   flex-direction: row;
   align-items: center;
   gap: 8px;
+}
+
+@media screen and (max-width: 992px) {
+  .news-img {
+    max-width: 750px;
+    margin: 0 auto;
+  }
 }

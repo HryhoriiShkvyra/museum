@@ -37,8 +37,6 @@ export default function Halls() {
     console.log(hallActive);
   }, []);
 
-  const RedirectToPage = () => {};
-
   const HallData = [
     {
       hall: "hall-1",

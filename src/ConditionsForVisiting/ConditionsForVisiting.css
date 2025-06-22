@@ -43,7 +43,7 @@
 .conditions-disclaimer {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   margin-top: 4px;
   color: var(--grey-600);
 }
