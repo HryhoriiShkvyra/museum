@@ -76,54 +76,54 @@ const Slider = () => {
   }, [totalSlides]);
 
   return (
-    <>
-      <div
-        className="slider-container"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <div className="slider-wrapper">
-          {sliderData.map((slide, index) => (
-            <div
-              key={slide.id}
-              className={`slide ${index === currentSlide ? "active" : ""}`}
-              style={{ backgroundImage: `url(${slide.img})` }}
-            >
-              <div className="info-block">
-                <h3 className="info-title">{slide.title_ua}</h3>
-                <h5 className="info-subtitle">Limited edition</h5>
-                <div className="info-details">
-                  <div className="info-row">
-                    <h3 className="info-label">Країна:</h3>
-                    <h3 className="info-value">{slide.country}</h3>
-                  </div>
+    <div
+      className="slider-container"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="slider-wrapper">
+        {sliderData.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`slide ${index === currentSlide ? "active" : ""}`}
+            style={{
+              backgroundImage: `url(${slide.img})`,
+            }}
+          >
+            <div className="info-block">
+              <h3 className="info-title">{slide.title_ua}</h3>
+              <h5 className="info-subtitle">Limited edition</h5>
+              <div className="info-details">
+                <div className="info-row">
+                  <h3 className="info-label">Країна:</h3>
+                  <h3 className="info-value">{slide.country}</h3>
+                </div>
 
-                  <div className="info-row">
-                    <h3 className="info-label">Майстер:</h3>
-                    <h3 className="info-value">{slide.manufacture}</h3>
-                  </div>
-                  <div className="info-row">
-                    <h3 className="info-label">Дата:</h3>
-                    <h3 className="info-value">{slide.date}</h3>
-                  </div>
-                  <div className="info-row">
-                    <h3 className="info-label">Розмір:</h3>
-                    <h3 className="info-value">{slide.size}</h3>
-                  </div>
+                <div className="info-row">
+                  <h3 className="info-label">Майстер:</h3>
+                  <h3 className="info-value">{slide.manufacture}</h3>
+                </div>
+                <div className="info-row">
+                  <h3 className="info-label">Дата:</h3>
+                  <h3 className="info-value">{slide.date}</h3>
+                </div>
+                <div className="info-row">
+                  <h3 className="info-label">Розмір:</h3>
+                  <h3 className="info-value">{slide.size}</h3>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        <button className="nav-arrow prev" onClick={prevSlide}>
-          ‹
-        </button>
-        <button className="nav-arrow next" onClick={nextSlide}>
-          ›
-        </button>
+          </div>
+        ))}
       </div>
-    </>
+
+      <button className="nav-arrow prev" onClick={prevSlide}>
+        ‹
+      </button>
+      <button className="nav-arrow next" onClick={nextSlide}>
+        ›
+      </button>
+    </div>
   );
 };
 

@@ -72,6 +72,32 @@
   cursor: pointer;
 }
 
+.navbar-mobile-icon {
+  background-color: var(--grey-200);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 12px 9px 12px;
+  color: var(-white);
+  transform: scale(0.7);
+}
+
+.navbar-mobile-btns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.navbar-mobile-btn {
+  padding: 5px 12px;
+  border-bottom: 1px solid var(--grey-100);
+  font-weight: 600;
+  font-family: "Roboto Medium";
+  text-decoration: none;
+  color: var(--black);
+}
+
 @media screen and (max-width: 1000px) {
   .navbar-btns {
     display: none;

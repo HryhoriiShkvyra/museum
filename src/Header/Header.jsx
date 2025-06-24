@@ -3,9 +3,11 @@ import "./Header.css";
 import Logo from "../Assets/logo.png";
 import TopBar from "../TopBar/TopBar";
 import { Link } from "react-router-dom";
+import DehazeRoundedIcon from "@mui/icons-material/DehazeRounded";
 
 export default function Header() {
   const [langActive, setLangActive] = React.useState("UA");
+  const [mobileNavbar, setMobileNavBar] = React.useState("");
 
   return (
     <div className="navbar-wrapper">
@@ -77,6 +79,31 @@ export default function Header() {
               </div>
             </div>
           </div>
+          <div className="navbar-mobile">
+            <button className="navbar-mobile-icon">
+              <DehazeRoundedIcon style={{ color: "var(--white)" }} />
+            </button>
+          </div>
+        </div>
+        <div className="navbar-mobile-btns">
+          <Link Link to="/about-museum" className="navbar-mobile-btn">
+            <h4>ПРО МУЗЕЙ</h4>
+          </Link>
+          <Link to="/museum-tour" className="navbar-mobile-btn">
+            <h4>ПРОГУЛЯНКИ МУЗЕЕМ</h4>
+          </Link>
+          <Link to="/catalog" className="navbar-mobile-btn">
+            <h4>ЕКСПОНАТИ МУЗЕЮ</h4>
+          </Link>
+          <Link to="/gallery" className="navbar-mobile-btn">
+            <h4>ГАЛЕРЕЯ</h4>
+          </Link>
+          <Link to="/news" className="navbar-mobile-btn">
+            <h4>ПРО НАС</h4>
+          </Link>
+          <Link to="/contact-us" className="navbar-mobile-btn">
+            <h4>КОНТАКТИ</h4>
+          </Link>
         </div>
       </div>
     </div>
