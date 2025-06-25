@@ -29,13 +29,17 @@
   padding: 10px 0 25px;
 }
 
-.textarea-img-float {
+.textarea-float-img {
   float: right;
   max-width: 350px;
   width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 0 0 15px 40px;
+  padding: 0 0 15px 40px;
+}
+
+.textarea-img {
+  width: 100%;
 }
 
 .textarea-title {
@@ -50,8 +54,7 @@
 }
 
 .textarea-text-center {
-  padding: 25px;
-  text-align: center;
+  padding: 25px 15px;
   line-height: 1.6;
   color: var(--grey-700);
 }
@@ -61,7 +64,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 50px;
 }
 
 .img-and-text {
@@ -70,11 +72,23 @@
   flex: 1 1;
   flex-direction: column;
   align-items: start;
+  margin: 0 auto;
 }
 
 .img {
   max-width: 500px;
   width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .img-and-text-wrapper {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -85,12 +99,73 @@
   .textarea-text-center {
     text-align: inherit;
   }
+
+  .img-and-text-wrapper {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .img-and-text-wrapper {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .textarea-float-img {
+    float: right;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 0 0 15px 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .img-and-text-wrapper {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+  .textarea-float-img {
+    float: right;
+    max-width: 290px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 0 0 15px 40px;
+  }
 }
 
 @media screen and (max-width: 601px) {
-  .textarea-img-float {
-    /* align-items: center; */
-    margin: 0 auto 30px;
+  .textarea-float-img {
+    float: float;
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 0 0 15px 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .textarea-float-img {
     float: none;
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 0 0 15px 0px;
+    margin: 0 auto;
   }
 }

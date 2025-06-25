@@ -27,11 +27,10 @@
 .navbar-links {
   display: flex;
   flex-direction: row;
-  gap: 24px;
 }
 
 .navbar-link {
-  padding: 16px 0;
+  padding: 16px 7.5px;
   border-top: 1px solid transparent;
   font-weight: 600;
   text-transform: uppercase;
@@ -49,6 +48,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .navbar-lang-btn-wrapper {
@@ -80,26 +80,67 @@
   padding: 12px 12px 9px 12px;
   color: var(-white);
   transform: scale(0.7);
+  cursor: pointer;
+  visibility: collapse;
+}
+
+.navbar-mobile-wrapper {
+  position: absolute;
+  max-width: 1300px;
+  width: 100%;
+  height: fit-content;
+  z-index: 1;
+  transition: all ease 0.5s;
 }
 
 .navbar-mobile-btns {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  padding-top: 20px;
+  background-color: var(--white);
+  transition: all ease 0.5s;
 }
 
 .navbar-mobile-btn {
+  width: 100%;
   padding: 5px 12px;
+  border-top: 1px solid transparent;
   border-bottom: 1px solid var(--grey-100);
   font-weight: 600;
   font-family: "Roboto Medium";
   text-decoration: none;
   color: var(--black);
+
+  transition: all ease 0.5s;
+}
+
+.navbar-mobile-btn:last-child {
+  padding: 5px 12px;
+  border-bottom: none;
+  font-weight: 600;
+  font-family: "Roboto Medium";
+  text-decoration: none;
+  color: var(--black);
+
+  transition: all ease 0.5s;
+}
+
+.navbar-mobile-btn:hover {
+  border-top: 1px solid red;
+}
+
+.navbar-mobile-lang-btns {
+  padding: 25px 0 15px 0;
+  background-color: var(--white);
 }
 
 @media screen and (max-width: 1000px) {
   .navbar-btns {
     display: none;
+  }
+
+  .navbar-mobile-icon {
+    visibility: visible;
   }
 }

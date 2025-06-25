@@ -242,20 +242,40 @@ h4 {
 @media screen and (max-width: 600px) {
   .section,
   .main-section {
-    padding: 0 35px;
+    padding: 0 30px;
   }
 
   .main-section {
-    padding: 35px 50px;
+    padding: 35px 30px;
   }
 }
 
 @media screen and (max-width: 576px) {
   .section {
-    padding: 0 50px;
+    padding: 0 30px;
   }
 
   .main-section {
-    padding: 35px 50px;
+    padding: 35px 30px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .section {
+    padding: 0 30px;
+  }
+
+  .main-section {
+    padding: 35px 30px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .section {
+    padding: 0 20px;
+  }
+
+  .main-section {
+    padding: 25px 20px;
   }
 }

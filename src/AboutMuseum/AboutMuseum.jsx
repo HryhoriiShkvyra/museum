@@ -30,8 +30,8 @@ export default function AboutMuseum() {
       <div className="about-museum-main-content">
         <div className="main-section">
           <div className="textarea-wrapper">
-            <div className="textarea-img-float">
-              <img src={IMG_1} alt="" />
+            <div className="textarea-float-img">
+              <img className="textarea-img" src={IMG_1} alt="" />
             </div>
             <div className="textarea">
               <div className="textarea-title">
