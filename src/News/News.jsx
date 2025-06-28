@@ -1,11 +1,11 @@
 import "./News.css";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import IMG_1 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start cover.jpg";
-import IMG_2 from "../Assets/news/Part two. The Story of Spanish Porcelain Lladro/COVER.jpg";
-import IMG_3 from "../Assets/news/Part three. Walk through the «East» hall/COVER.jpg";
-import IMG_4 from "../Assets/news/Part four. Acquaintance with the unique products of Ukrainian factories and famous manufactories of Western Europe/COVER.jpg";
-import IMG_5 from "../Assets/news/Part five. «Divine» hall of Shvets Museum/COVER.jpg";
+import IMG_1 from "../Assets/news/Part one/part-one-the-start cover.jpg";
+import IMG_2 from "../Assets/news/Part two/COVER.jpg";
+import IMG_3 from "../Assets/news/Part three/COVER.jpg";
+import IMG_4 from "../Assets/news/Part four/COVER.jpg";
+import IMG_5 from "../Assets/news/Part five/COVER.jpg";
 import { Link, useNavigate } from "react-router-dom";
 
 const News = () => {
@@ -45,8 +45,7 @@ const News = () => {
       id: "4",
       title_eng:
         "Part four. Acquaintance with the unique products of Ukrainian factories",
-      //  title_eng:
-      // "Part four. Acquaintance with the unique products of Ukrainian factories and famous manufactories of Western Europe",
+
       title_ua:
         "Частина четверта. Знайомство з унікальними порцеляновими виробами українських заводів та найвідоміших мануфактур Західної Європи",
       sub_title:
