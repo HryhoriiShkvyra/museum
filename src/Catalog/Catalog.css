@@ -2,21 +2,27 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* gap: 25px; */
-  margin: 0 auto 40px;
+  align-items: center;
+
+  /* margin: 0 auto 40px; */
 }
 
 .filter-by-country-btn {
   display: flex;
-  padding: 20px;
-
+  justify-content: center;
+  padding: 20px 18px;
+  margin: 0 5px;
   text-transform: capitalize;
   transition: all ease 0.5s;
 }
 
 .filter-by-country-btn-active {
+  display: flex;
+  justify-content: center;
   padding: 20px;
-  margin-right: 20px;
+  margin: 0 5px;
+
+  width: 10%;
 
   background-color: var(--grey-80);
   border-radius: 20px;
@@ -56,6 +62,7 @@
   padding: 0px 10px 5px 0;
   font-weight: 600;
   text-align: inherit;
+  padding-bottom: 5px;
 }
 
 .filter-by-manufacture-wrapper {
@@ -69,7 +76,9 @@
 
 .filter-by-manufacture-title-text {
   padding: 2px 12px;
+
   border-right: 1px solid var(--grey-100);
+  border-bottom: transparent;
   text-transform: capitalize;
 
   color: var(--grey-500);
@@ -81,6 +90,7 @@
 }
 
 .filter-by-manufacture-title {
+  padding-bottom: 5px;
   border-bottom: 1px solid transparent;
   transition: all ease 0.5s;
 }

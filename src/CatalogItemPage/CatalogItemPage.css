@@ -45,3 +45,16 @@
 .catalog-item-page-else-title {
   padding: 25px;
 }
+
+@media screen and (max-width: 768px) {
+  .catalog-item-image-wrapper {
+    text-align: center;
+  }
+
+  .catalog-item-image {
+    max-width: 500px;
+    width: 100%;
+    float: none;
+    padding: 5px 15px 5px 5px;
+  }
+}

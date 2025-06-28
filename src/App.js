@@ -27,39 +27,44 @@ const Layout = () => {
 };
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />,
+        children: [
+          { path: "/", element: <IndexPage /> },
+          { path: "/about-museum", element: <AboutMuseum /> },
+          {
+            path: "/museum-tour",
+            element: <MuseumTour />,
+          },
+          {
+            path: "/museum-tour/:hallId",
+            element: <Halls />,
+          },
+          { path: "/catalog", element: <Catalog /> },
+          { path: "/catalog/:country/:id", element: <CatalogItemPage /> },
+          { path: "/gallery", element: <Gallery /> },
+          { path: "/news", element: <News /> },
+          { path: "/news/:id", element: <PressAboutMuseum /> },
+          // { path: "/test", element: <PressAboutMuseum /> },
+          { path: "/contact-us", element: <ContactUs /> },
+          {
+            path: "/contact-us/rules-for-visiting",
+            element: <RulesForVisiting />,
+          },
+          {
+            path: "/contact-us/conditions-for-visiting",
+            element: <ConditionsForVisiting />,
+          },
+        ],
+      },
+    ],
     {
-      path: "/",
-      element: <Layout />,
-      children: [
-        { path: "/", element: <IndexPage /> },
-        { path: "/about-museum", element: <AboutMuseum /> },
-        {
-          path: "/museum-tour",
-          element: <MuseumTour />,
-        },
-        {
-          path: "/museum-tour/:hallId",
-          element: <Halls />,
-        },
-        { path: "/catalog", element: <Catalog /> },
-        { path: "/catalog/:country/:id", element: <CatalogItemPage /> },
-        { path: "/gallery", element: <Gallery /> },
-        { path: "/news", element: <News /> },
-        { path: "/news/:id", element: <PressAboutMuseum /> },
-        // { path: "/test", element: <PressAboutMuseum /> },
-        { path: "/contact-us", element: <ContactUs /> },
-        {
-          path: "/contact-us/rules-for-visiting",
-          element: <RulesForVisiting />,
-        },
-        {
-          path: "/contact-us/conditions-for-visiting",
-          element: <ConditionsForVisiting />,
-        },
-      ],
-    },
-  ]);
+      basename: "/museum",
+    }
+  );
 
   return (
     <div className="App">

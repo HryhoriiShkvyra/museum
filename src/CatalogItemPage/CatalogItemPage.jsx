@@ -81,7 +81,9 @@ export default function MuseumApp() {
     ),
 
     image: ({ src, alt }) => (
-      <img className="catalog-item-image" src={src} alt={alt} />
+      <div className="catalog-item-image-wrapper">
+        <img className="catalog-item-image" src={src} alt={alt} />
+      </div>
     ),
 
     quote: ({ children, author }) => (
