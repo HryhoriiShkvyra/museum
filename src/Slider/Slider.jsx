@@ -84,7 +84,7 @@ const Slider = () => {
       <div className="slider-wrapper">
         {sliderData.map((slide, index) => (
           <div
-            key={slide.id}
+            key={slide.id + " " + index}
             className={`slide ${index === currentSlide ? "active" : ""}`}
             style={{
               backgroundImage: `url(${slide.img})`,
