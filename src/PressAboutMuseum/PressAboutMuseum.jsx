@@ -1,16 +1,16 @@
 import "./PressAboutMuseum.css";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import COVER from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start cover.jpg";
-import IMG_1 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_1.jpg";
-import IMG_2 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_2.jpg";
-import IMG_3 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_3.jpg";
-import IMG_4 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_4.jpg";
-import IMG_5 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_5.jpg";
-import IMG_6 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_6.jpg";
-import IMG_7 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_7.jpg";
-import IMG_8 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_8.jpg";
-import IMG_9 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_9.jpg";
-import IMG_10 from "../Assets/news/Part one. The start of the collection and the story of the creation of the museum/part-one-the-start IMG_10.jpg";
+import COVER from "../Assets/news/Part one/part-one-the-start cover.jpg";
+import IMG_1 from "../Assets/news/Part one/part-one-the-start IMG_1.jpg";
+import IMG_2 from "../Assets/news/Part one/part-one-the-start IMG_2.jpg";
+import IMG_3 from "../Assets/news/Part one/part-one-the-start IMG_3.jpg";
+import IMG_4 from "../Assets/news/Part one/part-one-the-start IMG_4.jpg";
+import IMG_5 from "../Assets/news/Part one/part-one-the-start IMG_5.jpg";
+import IMG_6 from "../Assets/news/Part one/part-one-the-start IMG_6.jpg";
+import IMG_7 from "../Assets/news/Part one/part-one-the-start IMG_7.jpg";
+import IMG_8 from "../Assets/news/Part one/part-one-the-start IMG_8.jpg";
+import IMG_9 from "../Assets/news/Part one/part-one-the-start IMG_9.jpg";
+import IMG_10 from "../Assets/news/Part one/part-one-the-start IMG_10.jpg";
 import { useParams } from "react-router-dom";
 
 const PressAboutMuseum = () => {
