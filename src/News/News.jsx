@@ -44,7 +44,9 @@ const News = () => {
     {
       id: "4",
       title_eng:
-        "Part four. Acquaintance with the unique products of Ukrainian factories and famous manufactories of Western Europe",
+        "Part four. Acquaintance with the unique products of Ukrainian factories",
+      //  title_eng:
+      // "Part four. Acquaintance with the unique products of Ukrainian factories and famous manufactories of Western Europe",
       title_ua:
         "Частина четверта. Знайомство з унікальними порцеляновими виробами українських заводів та найвідоміших мануфактур Західної Європи",
       sub_title:
