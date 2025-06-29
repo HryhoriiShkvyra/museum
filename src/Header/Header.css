@@ -86,10 +86,12 @@
 
 .navbar-mobile-wrapper {
   position: absolute;
-  max-width: 1300px;
-  width: 100%;
+
+  width: 90%;
+  padding: 0 25px;
   height: fit-content;
   z-index: 1;
+  background-color: var(--white);
   transition: all ease 0.5s;
 }
 
