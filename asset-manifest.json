@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/museum/static/css/main.9dbf9907.css",
+    "main.css": "/museum/static/css/main.d41f4758.css",
     "main.js": "/museum/static/js/main.96c67e1f.js",
     "static/media/IMG_10.jpg": "/museum/static/media/IMG_10.cd5110ac6da656f9c8b0.jpg",
     "static/media/IMG_6.jpg": "/museum/static/media/IMG_6.7589b11f7507621a3039.jpg",
@@ -99,11 +99,11 @@
     "static/media/hall_1_1.jpg": "/museum/static/media/hall_1_1.ea595e25fde8635471b4.jpg",
     "static/media/logo.png": "/museum/static/media/logo.453a93c5e02d314251ba.png",
     "index.html": "/museum/index.html",
-    "main.9dbf9907.css.map": "/museum/static/css/main.9dbf9907.css.map",
+    "main.d41f4758.css.map": "/museum/static/css/main.d41f4758.css.map",
     "main.96c67e1f.js.map": "/museum/static/js/main.96c67e1f.js.map"
   },
   "entrypoints": [
-    "static/css/main.9dbf9907.css",
+    "static/css/main.d41f4758.css",
     "static/js/main.96c67e1f.js"
   ]
 }
