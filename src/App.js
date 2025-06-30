@@ -1,6 +1,11 @@
 import React from "react";
 import "./index.css";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import {
+  useLocation,
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom";
 import Header from "./Header/Header.jsx";
 import AboutMuseum from "./AboutMuseum/AboutMuseum.jsx";
 import Footer from "./Footer/Footer.jsx";
@@ -16,9 +21,20 @@ import PressAboutMuseum from "./PressAboutMuseum/PressAboutMuseum.jsx";
 import IndexPage from "./IndexPage/IndexPage.jsx";
 import CatalogItemPage from "./CatalogItemPage/CatalogItemPage.jsx";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const Layout = () => {
   return (
     <div className="app">
+      <ScrollToTop />
       <Header />
       <Outlet />
       <Footer />
