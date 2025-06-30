@@ -81,6 +81,7 @@
   border: none;
   border-radius: 5px;
   padding: 12px 12px 9px 12px;
+  margin-right: 20px;
   color: var(-white);
   transform: scale(0.7);
   cursor: pointer;
